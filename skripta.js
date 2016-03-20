@@ -64,8 +64,11 @@ window.addEventListener('load', function() {
 			vrednosti.push(barva.innerHTML);
 		}
 		
-		minCas = 1000;
-		maxCas = 1000;
+		var minCasPolje = document.getElementById("min");
+		var maxCasPolje = document.getElementById("max");
+		
+		minCas = minCasPolje.value;
+		maxCas = maxCasPolje.value;
 		spremeniBarvo(0);
 		
 		var start = document.querySelector("#start");
