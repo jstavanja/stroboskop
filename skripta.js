@@ -42,6 +42,18 @@ window.addEventListener('load', function() {
 	
 	var stop = function(event) {
 		ustavi = true;
+		
+		// ko se pokliče stop se mora tudi gumb resetirati ...
+		var naGumbu = document.querySelector("#start");
+		
+		// sprememba teksta
+		naGumbu.innerHTML = "Zaženi stroboskop";
+		
+		// sprememba akcij ob kliku
+		naGumbu.removeEventListener('click', stop);
+		
+		naGumbu.addEventListener('click', zagon);
+		
 	}
 	
 	var zagon = function(event) {
